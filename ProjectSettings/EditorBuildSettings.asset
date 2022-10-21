@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Menu/MenuPrincipal.unity
+    guid: 59e86dec0d9ec32429b5cb5f8bbdeae5
+  - enabled: 1
+    path: Assets/SkythianCat/Hand_Painted_Nature_Kit_LITE/DEMO/Demo_scene.unity
+    guid: 2b90041c02fa0424794af2d500508091
   m_configObjects: {}
