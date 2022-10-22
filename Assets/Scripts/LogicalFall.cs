@@ -21,6 +21,5 @@ public class LogicalFall : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) {
         movePlayer.jumpAllowed = false;
-        Debug.Log("jumpAllowed: False");
     }
 }
