@@ -17,9 +17,11 @@ public class LogicalFall : MonoBehaviour
         
     }
     private void OnTriggerStay(Collider other) {
-        movePlayer.jumpAllowed = true;
+        if(other.gameObject.CompareTag("Floor"))
+            movePlayer.jumpAllowed = true;
     }
     private void OnTriggerExit(Collider other) {
-        movePlayer.jumpAllowed = false;
+        if(other.gameObject.CompareTag("Floor"))
+            movePlayer.jumpAllowed = false;
     }
 }

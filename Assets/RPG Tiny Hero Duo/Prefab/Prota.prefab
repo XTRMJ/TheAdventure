@@ -947,10 +947,10 @@ GameObject:
   - component: {fileID: 2720735397727770259}
   - component: {fileID: 2471146957046846888}
   - component: {fileID: 7260833617022205288}
-  - component: {fileID: 2979141676296728611}
-  - component: {fileID: 7260833617022205289}
+  - component: {fileID: 7958484314792367215}
+  - component: {fileID: 3468767294571879310}
   - component: {fileID: 7260833617022205286}
-  - component: {fileID: 6516240808002323381}
+  - component: {fileID: 8415307037954571346}
   m_Layer: 0
   m_Name: Prota
   m_TagString: Untagged
@@ -1013,7 +1013,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!136 &2979141676296728611
+--- !u!136 &7958484314792367215
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,11 +1023,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1827191
-  m_Height: 0.7498304
+  m_Radius: 0.1538086
+  m_Height: 0.5396881
   m_Direction: 1
-  m_Center: {x: 0, y: 0.317276, z: 0}
---- !u!65 &7260833617022205289
+  m_Center: {x: 0, y: 0.070373535, z: -0.015979767}
+--- !u!65 &3468767294571879310
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1038,8 +1038,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5081177, z: 1}
-  m_Center: {x: 0, y: 0.7946472, z: 0}
+  m_Size: {x: 0.80022866, y: 1.5793369, z: 0.7802515}
+  m_Center: {x: -0.000000029802322, y: 0.72916543, z: 0.049942836}
 --- !u!114 &7260833617022205286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,9 +1059,9 @@ MonoBehaviour:
   forceJump: 0
   jumpAllowed: 0
   rb: {fileID: 7260833617022205288}
-  colBase: {fileID: 7260833617022205289}
-  colFloor: {fileID: 7260833617022205289}
---- !u!114 &6516240808002323381
+  colBase: {fileID: 0}
+  colFloor: {fileID: 0}
+--- !u!114 &8415307037954571346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
