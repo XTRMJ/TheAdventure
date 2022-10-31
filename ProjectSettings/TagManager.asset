@@ -6,11 +6,12 @@ TagManager:
   tags:
   - PlayerEyes
   - Floor
+  - Enemigo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
