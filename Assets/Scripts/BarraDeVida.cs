@@ -7,7 +7,7 @@ public class BarraDeVida : MonoBehaviour
 {
 
     public GameObject[] hearts;
-    public int vidas;
+    private int vidas=5;
     public GameObject Personaje;
     // Start is called before the first frame update
     void Start()
@@ -32,25 +32,19 @@ public class BarraDeVida : MonoBehaviour
         {
             hearts[2].gameObject.SetActive(false);
         }
+        if (vidas < 4)
+        {
+            hearts[3].gameObject.SetActive(false);
+        }
+        if (vidas < 5)
+        {
+            hearts[4].gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider col)
     {
-
         if (col.gameObject.tag == "Enemigo")
             vidas -= 1;
-
-        if ( vidas == 0)
-        {
-            vidas = 3;
-            hearts[1].gameObject.SetActive(true);
-            hearts[2].gameObject.SetActive(true);
-            hearts[3].gameObject.SetActive(true);
-
-
-
-        }
-
-
     }
 }
