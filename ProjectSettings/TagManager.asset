@@ -7,6 +7,7 @@ TagManager:
   - PlayerEyes
   - Floor
   - Enemigo
+  - Ground
   layers:
   - Default
   - TransparentFX
