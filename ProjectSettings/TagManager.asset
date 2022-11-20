@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Enemigo
   - Ground
+  - Sword
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
+    private float hp = 3f;
+    private float danioArma = 1f;
     public float rangoDeAlerta;
     public LayerMask capaDelJugador;
     public Transform jugador;
@@ -32,5 +34,12 @@ public class Enemigo : MonoBehaviour
     private void OnDrawGizmos() {
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, rangoDeAlerta);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == "Sword")
+            hp -= danioArma;
+        if(hp <= 0)
+            Destroy(gameObject);
     }
 }

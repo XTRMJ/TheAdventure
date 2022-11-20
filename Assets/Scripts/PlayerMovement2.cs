@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerMovement2 : MonoBehaviour
 { 
    public float speed;
-   public float rotationSpeed;
+   //public float rotationSpeed;
    public float jumpSpeed;
    public Transform cam; 
    public float turnSmoothTime = 0.1f;
+   public AudioClip stepSfx;
 
    private CharacterController controller;
    private Animator anim;
@@ -16,6 +17,7 @@ public class PlayerMovement2 : MonoBehaviour
    private float originalStepOffset;
    float turnSmoothVelocity;
    private Vector3 moveDirection;
+   private AudioSource audioSource;
 
    void Start() {
         Cursor.lockState = CursorLockMode.Locked;
@@ -23,11 +25,13 @@ public class PlayerMovement2 : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         originalStepOffset = controller.stepOffset;
+        audioSource = GetComponent<AudioSource>();
    }
 
     void Update() {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+        bool attack = Input.GetKey(KeyCode.Mouse0);
 
         Vector3 movementDirection = new Vector3(horizontal, 0, vertical);    
         float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
@@ -42,6 +46,7 @@ public class PlayerMovement2 : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             //controller.Move(moveDirection.normalized * moveSpeed * Time.deltaTime);
+            
         }
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
@@ -65,10 +70,20 @@ public class PlayerMovement2 : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }*/
+
+        //attack
+        if(attack)
+            FindObjectOfType<AudioManager>().Play("SwordSwing");
+
         anim.SetFloat("moveX", vertical);
         anim.SetFloat("moveY", horizontal);
         anim.SetFloat("velocityY", velocity.y);
+        anim.SetBool("attack", attack);
 
 
+    }
+
+    private void Step() {
+         audioSource.PlayOneShot(stepSfx);
     }
 }
