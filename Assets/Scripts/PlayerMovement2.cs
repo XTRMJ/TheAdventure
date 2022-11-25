@@ -19,6 +19,13 @@ public class PlayerMovement2 : MonoBehaviour
    private Vector3 moveDirection;
    private AudioSource audioSource;
 
+   public List<DialogService.MessageInfo> messages = new List<DialogService.MessageInfo>();
+
+   private void Awake()
+   {
+    DialogService.Instance.ShowDialogs(messages);
+   }
+
    void Start() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
