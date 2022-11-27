@@ -21,15 +21,14 @@ public class MovesBoss : MonoBehaviour
 
     private Animator bossAnim;
 
-    float visDist = 10.0f;
-    float visAngle = 360.0f;
-    float shortAttack = 3.3f;
+    public float visDist = 10.0f;
+    public float visAngle = 360.0f;
+    public float shortAttack = 3.3f;
     float tiempo;
     public float LP = 4;
 
     private State state;
     private AudioSource bossAudio;
-    private GameObject playerGO;
     public AudioClip rugido;
     public AudioClip molestia;
     public AudioClip muriendo;
@@ -37,7 +36,7 @@ public class MovesBoss : MonoBehaviour
 
     
 
-    Vector3 posInicial = new Vector3 (0f,0f,0f);
+    Vector3 posInicial = new Vector3 (39f,112f,236f);
     Vector3 area = new Vector3 (4f,4f,4f);
 
     public bool golpeado; //quitar public, no seas imbecil
@@ -48,7 +47,6 @@ public class MovesBoss : MonoBehaviour
     void Start()
     {
     	bossAnim = GetComponent<Animator>();
-        playerGO = GameObject.Find("Player");
         bossAudio = GetComponent<AudioSource>();
         state = State.Idle;
     }
@@ -114,7 +112,7 @@ public class MovesBoss : MonoBehaviour
                 break;
 
             case State.GoingBackToStart:
-                boss.SetDestination(Vector3.zero);
+                boss.SetDestination(posInicial);
         	    bossAnim.SetBool("Walk Forward", true);
                 if(transform.position.magnitude - posInicial.magnitude < 2f){
                     bossAnim.SetBool("Walk Forward", false); 
