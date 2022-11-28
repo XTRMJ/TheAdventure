@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VidaEnemigo : MonoBehaviour
 {
-    private int vida=3;
+    public int vida=3;
     public GameObject Enemigo;
     // Start is called before the first frame update
     void Start()
