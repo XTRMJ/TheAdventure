@@ -8,14 +8,14 @@ public class PlayerMovement2 : MonoBehaviour
    //public float rotationSpeed;
    public float jumpSpeed;
    public Transform cam; 
-   public float turnSmoothTime = 0.1f;
+   public float turnSmoothTime = 0.3f;
    public AudioClip stepSfx;
 
    private CharacterController controller;
    private Animator anim;
    private float ySpeed;
    private float originalStepOffset;
-   float turnSmoothVelocity;
+   float turnSmoothVelocity = 0.0f;
    private Vector3 moveDirection;
    private AudioSource audioSource;
 
@@ -44,16 +44,15 @@ public class PlayerMovement2 : MonoBehaviour
         float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
         movementDirection.Normalize();
 
-        if(magnitude >= 0.1f)
+        if(magnitude > 0)
         {
-            
             float targetAngle = Mathf.Atan2(movementDirection.x, movementDirection.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            
+            //float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle.eulerAngles.y, ref turnSmoothVelocity, turnSmoothTime);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, cam.eulerAngles.y, ref turnSmoothVelocity, turnSmoothTime);
+            //Debug.Log("angle: " + cam);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             //controller.Move(moveDirection.normalized * moveSpeed * Time.deltaTime);
-            
         }
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
@@ -79,14 +78,15 @@ public class PlayerMovement2 : MonoBehaviour
         }*/
 
         //attack
+        
         if(attack)
             FindObjectOfType<AudioManager>().Play("SwordSwing");
 
-        anim.SetFloat("moveX", vertical);
-        anim.SetFloat("moveY", horizontal);
+        anim.SetFloat("moveX", horizontal);
+        anim.SetFloat("moveY", vertical);
         anim.SetFloat("velocityY", velocity.y);
         anim.SetBool("attack", attack);
-
+        
 
     }
 

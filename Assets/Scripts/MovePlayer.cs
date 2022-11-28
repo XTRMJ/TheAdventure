@@ -6,7 +6,7 @@ public class MovePlayer : MonoBehaviour
 {
     private Animator anim;
     public float turnSpeed = 2.0f;
-    public float forward,side,forceJump = 8.0f;
+    public float forward,side,forceJump = 20.0f;
     public bool jumpAllowed;
     public Rigidbody rb;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class MovePlayer : MonoBehaviour
         if(jumpAllowed){
             if(Input.GetKeyDown(KeyCode.Space)){
                 anim.SetBool("jump",true);
-                rb.AddForce(new Vector3(0, forceJump, 0), ForceMode.Impulse);
+                //rb.AddForce(new Vector3(0, forceJump, 0), ForceMode.Impulse);
             }
             anim.SetBool("finishJump",true);
         }else{
