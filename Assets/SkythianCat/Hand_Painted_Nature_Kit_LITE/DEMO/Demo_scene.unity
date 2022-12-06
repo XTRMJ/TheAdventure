@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5490804, g: 0.78049093, b: 0.7766921, a: 1}
+  m_IndirectSpecularColor: {r: 0.549257, g: 0.78058803, b: 0.77652794, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -859,6 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433267ece8e9704f99d2c353593c2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 3
   Enemigo: {fileID: 250447479}
 --- !u!54 &250447485
 Rigidbody:
@@ -938,6 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433267ece8e9704f99d2c353593c2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 3
   Enemigo: {fileID: 276603261}
 --- !u!54 &276603267
 Rigidbody:
@@ -1098,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433267ece8e9704f99d2c353593c2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 3
   Enemigo: {fileID: 288329886}
 --- !u!114 &288329889
 MonoBehaviour:
@@ -3083,7 +3086,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843591848}
-  m_LocalRotation: {x: 0.09252101, y: -0.000000020488015, z: 0.000000026370657, w: 0.9957108}
+  m_LocalRotation: {x: 0.09252102, y: 0.000000014320388, z: 0.000000023136275, w: 0.9957108}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3321,6 +3324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433267ece8e9704f99d2c353593c2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 3
   Enemigo: {fileID: 1003409371}
 --- !u!1001 &1250910519
 PrefabInstance:
@@ -3503,6 +3507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433267ece8e9704f99d2c353593c2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 3
   Enemigo: {fileID: 1358149545}
 --- !u!114 &1358149548
 MonoBehaviour:
@@ -4376,7 +4381,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6670723430306563417, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
       propertyPath: m_Speed
-      value: 2.5
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -6670723430306563417, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
+      propertyPath: m_Acceleration
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -6670723430306563417, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: -286750172550792994, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1344267932682822, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
       propertyPath: m_TagString
@@ -4516,7 +4533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443449189095067955, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
       propertyPath: visAngle
-      value: 360
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1443449189095067955, guid: e9a03d46b76afe246a9ffd58d255bb65, type: 3}
       propertyPath: shortAttack
@@ -4756,6 +4773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433267ece8e9704f99d2c353593c2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 3
   Enemigo: {fileID: 1876145419}
 --- !u!54 &1876145425
 Rigidbody:
