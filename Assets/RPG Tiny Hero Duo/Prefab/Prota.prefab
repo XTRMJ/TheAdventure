@@ -948,6 +948,10 @@ GameObject:
   - component: {fileID: 2471146957046846888}
   - component: {fileID: 7260833617022205288}
   - component: {fileID: 6468218762712928028}
+  - component: {fileID: 3358118254346853494}
+  - component: {fileID: 4850752909511519563}
+  - component: {fileID: 3355060195695730042}
+  - component: {fileID: 6119335817669679355}
   m_Layer: 0
   m_Name: Prota
   m_TagString: Untagged
@@ -1028,6 +1032,166 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0.01, y: 0.93, z: -0.03}
+--- !u!114 &3358118254346853494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353544280199482409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9788db9919c0574283eab6a7df986e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpSpeed: 5
+  cam: {fileID: 0}
+  turnSmoothTime: 0.1
+  stepSfx: {fileID: 8300000, guid: e5627b038d54af84f9d7b8ba4bc21389, type: 3}
+  messages:
+  - Message: Hola soy Arthur y necesito de tu ayuda para poder salvar mi hogar, deja
+      te cuento porque...
+  - Message: "Veras hace a\xF1os lo que conoc\xEDa como hogar era un lugar muy tranquilo,
+      la gente era amable y siempre fuimos muy unidos, realmente viv\xEDamos muy
+      felices..."
+  - Message: "Pero de un d\xEDa para otro nuestro pueblo y los alrededores fueron
+      invadidos por criaturas extra\xF1as..."
+  - Message: El temor se apodero de la gente y comenzaron a huir, las criaturas destruyeron
+      todo a su paso, no quedo absolutamente nada...
+  - Message: "Mi familia tambi\xE9n se fue, y yo decidi quedarme para poder defender
+      mi hogar..."
+  - Message: He derrotado a algunas criaturas pero no he podido con todas, son demasiadas
+      y esto nunca termina...
+  - Message: Necesito derrotar al jefe para que esta pesadilla termine, para que
+      la gente regrese pero sobre todo necesito recuperar el pueblo.
+--- !u!114 &4850752909511519563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353544280199482409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5c212452fea1749861abc6dc7439e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Personaje: {fileID: 3353544280199482409}
+--- !u!114 &3355060195695730042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353544280199482409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed0c3d6ecb7d4c41a2c3808d2842a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &6119335817669679355
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353544280199482409}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3369634609090852064
 GameObject:
   m_ObjectHideFlags: 0
