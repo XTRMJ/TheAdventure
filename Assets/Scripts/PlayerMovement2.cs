@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement2 : MonoBehaviour
 { 
-   [SerializeField] private bool gameOver;
+   public bool gameOver;
    public float speed;
    //public float rotationSpeed;
    public float jumpSpeed;
@@ -25,7 +25,7 @@ public class PlayerMovement2 : MonoBehaviour
 
    private void Awake()
    {
-    DialogService.Instance.ShowDialogs(messages);
+        DialogService.Instance.ShowDialogs(messages);
    }
 
    void Start() {

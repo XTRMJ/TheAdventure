@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class MovesBoss : MonoBehaviour
 {   
+    public GameObject credits;
     private enum State {
         Idle,
         ChaseTarget,
@@ -41,7 +42,6 @@ public class MovesBoss : MonoBehaviour
 
     public bool golpeado; //quitar public, no seas imbecil
     private bool sonido = true;
-
 
     // Start is called before the first frame update
     void Start()
@@ -123,6 +123,8 @@ public class MovesBoss : MonoBehaviour
             case State.Dead:
                 if(Time.time > tiempo){
                     Destroy(gameObject);
+                    credits.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
                 }
                 break;
         }

@@ -10,12 +10,13 @@ public class Enemigo : MonoBehaviour
     public LayerMask capaDelJugador;
     public Transform jugador;
     bool estarAlerta;
+    private BarraDeVida vidaPlayer;
+    private int i;
     public float velocidadEnemigo;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -37,9 +38,14 @@ public class Enemigo : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Sword")
+        if(other.CompareTag("Sword"))
             hp -= danioArma;
-        if(hp <= 0)
+        if(hp <= 0){
+            vidaPlayer = GameObject.Find("Prota").GetComponent<BarraDeVida>();
+            if(vidaPlayer.vidas<5) vidaPlayer.vidas += 1;
+            for(i=0;i<5 && vidaPlayer.hearts[i].gameObject.activeSelf;i++);
+            if(i>0) vidaPlayer.hearts[i].gameObject.SetActive(true);
             Destroy(gameObject);
+        }
     }
 }
