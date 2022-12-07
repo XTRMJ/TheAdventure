@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9788db9919c0574283eab6a7df986e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
   speed: 5
   jumpSpeed: 5
   cam: {fileID: 0}
@@ -1084,6 +1085,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Personaje: {fileID: 3353544280199482409}
+  timer: 0
 --- !u!114 &3355060195695730042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2842,6 +2844,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8738464927208897348, guid: f0aae4c8b38e02e48a4124483b105340, type: 3}
   m_PrefabInstance: {fileID: 2471146957762860890}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5784262606230435492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8218668140323578366, guid: f0aae4c8b38e02e48a4124483b105340, type: 3}
+  m_PrefabInstance: {fileID: 2471146957762860890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8330674942874518680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784262606230435492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54610914, y: 1.1400552, z: 0.08912776}
+  m_Center: {x: 0.004293486, y: 0.7636458, z: -0.000008866777}
 --- !u!1001 &2471146957917045791
 PrefabInstance:
   m_ObjectHideFlags: 0

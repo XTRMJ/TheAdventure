@@ -22,7 +22,7 @@ public class VidaEnemigo : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Player"){
+        if (col.CompareTag("Sword")){
             vida -= 1;
         }
     }
