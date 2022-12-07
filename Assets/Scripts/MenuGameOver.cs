@@ -19,15 +19,16 @@ public class MenuGameOver : MonoBehaviour
     }
 
     public void Reiniciar(){
+        Cursor.lockState = CursorLockMode.None ;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
 
     public void Menu(){
+        Cursor.lockState = CursorLockMode.None ;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-2);
     }
 
     public void Salir(){
-        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }

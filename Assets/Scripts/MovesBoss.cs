@@ -26,7 +26,7 @@ public class MovesBoss : MonoBehaviour
     public float visAngle = 360.0f;
     public float shortAttack = 3.3f;
     float tiempo;
-    public float LP = 4;
+    private float LP = 10;
 
     private State state;
     private AudioSource bossAudio;

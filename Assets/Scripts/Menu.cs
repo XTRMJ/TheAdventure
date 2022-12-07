@@ -22,6 +22,7 @@ public class Menu : MonoBehaviour
     }
 
     public void InicioDelJuego(){
+        Cursor.lockState = CursorLockMode.None ;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
